@@ -184,7 +184,7 @@ getVoltage(ESP32AnalogRead &adc, uint8_t samples, float divider)
     }
     uint16_t voltage = int(voltage_raw / samples / divider);
      
-    DEBUG_PRINTF("Voltage = %dmV\n", voltage);
+    //DEBUG_PRINTF("Voltage = %dmV\n", voltage);
 
     return voltage;
 }

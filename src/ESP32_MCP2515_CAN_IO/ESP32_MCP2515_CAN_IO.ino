@@ -391,7 +391,7 @@ void loop()
     #ifdef DAC0_ADDR
     if ((rxId & 0x3FFFFFFF) == CAN_ID_AOUT0) {
       uint16_t u_dac0 = (rxBuf[1] & 0xF) << 8 | rxBuf[0];
-      DEBUG_PRINTF("AnalogOut0: 0x%03X\0", u_dac0);
+      DEBUG_PRINTF("AnalogOut0: 0x%03X\n", u_dac0);
       MCP0.setValue(u_dac0);
     }
     #endif
@@ -408,7 +408,7 @@ void loop()
     // Digital Outputs
     //
     if ((rxId & 0x3FFFFFFF) == CAN_ID_DOUT) {
-      DEBUG_PRINTF("DigitalOut: 0x%02X", rxBuf[0]);
+      DEBUG_PRINTF("DigitalOut: 0x%02X\n", rxBuf[0]);
       digitalWrite(PIN_D0_OUT, rxBuf[0] & 0x01);
       digitalWrite(PIN_D1_OUT, (rxBuf[0] >> 1) & 0x01);
     }

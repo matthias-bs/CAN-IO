@@ -59,6 +59,8 @@ BO_ 1928 Analog_In: 8 Vector__XXX
 BO_ 1920 Analog_Out0: 8 Vector__XXX
  SG_ AnalogOut_0 : 0|12@1+ (0.001220703125,0) [0|0] "V" Vector__XXX
 
+BO_ 1921 Analog_Out1: 8 Vector__XXX
+ SG_ AnalogOut_1 : 0|12@1+ (0.001220703125,0) [0|0] "V" Vector__XXX
 
 
 BA_DEF_  "BusType" STRING ;

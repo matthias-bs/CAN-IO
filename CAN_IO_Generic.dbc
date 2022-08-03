@@ -1,0 +1,69 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 1930 Digital_In: 8 Vector__XXX
+ SG_ DigitalIn_7 : 7|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalIn_6 : 6|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalIn_5 : 5|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalIn_4 : 4|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalIn_3 : 3|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalIn_2 : 2|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalIn_1 : 1|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalIn_0 : 0|1@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1929 Digital_Out: 8 Vector__XXX
+ SG_ DigitalOut_1 : 1|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalOut_0 : 0|1@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1928 Analog_In: 8 Vector__XXX
+ SG_ AnalogIn_3 : 48|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ AnalogIn_2 : 32|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ AnalogIn_1 : 16|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ AnalogIn_0 : 0|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+
+BO_ 1920 Analog_Out0: 8 Vector__XXX
+ SG_ AnalogOut_0 : 0|12@1+ (0.001220703125,0) [0|0] "V" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+

@@ -2,7 +2,7 @@
 // ESP32_IntegratedSJA1000_CAN_IO.ino
 //
 // CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module 
-// based on ESP32, MCP2515 CAN Controller and MCP4725 Digital Analog Converter
+// based on ESP32 (+ external CAN Transceiver) and MCP4725 Digital Analog Converter
 //
 // https://github.com/matthias-bs/CAN-IO
 //

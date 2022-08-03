@@ -21,6 +21,7 @@
 // Notes:
 // ------
 // - MCP2515 is supplied with 5V (use level shifters for I/O lines!)
+// - CAN Transceiver is supplied with 5V
 // - MCP4725 is supplied with 5V (pull-ups for SDA and SCL to 3.3V)
 // - Routing and decoupling for MCP4725 should be implemented with care
 // - Implement voltage dividers and filter capacitors for analog inputs as required

@@ -1,9 +1,13 @@
 # CAN-IO
 CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 
+> ⚠️ Check supply and I/O voltages carefully and build up your circuit accordingly!
+> 
 > :warning: Over voltage/over current protection for analog and digital inputs/outputs must be implemented as required!
-
+>
 > :warning: Implement voltage dividers and filter capacitors for analog inputs as required.
+
+
 
 | Program              | MCU | Board                        | Supply Voltage            | Analog Inputs | Analog Outputs | Digital Inputs | Digital Outputs |
 | -------------------- | --- | ---------------------------- | ------------------------- | ------------- | -------------- | -------------- | --------------- |

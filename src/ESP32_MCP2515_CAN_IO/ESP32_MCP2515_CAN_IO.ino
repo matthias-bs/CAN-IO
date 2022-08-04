@@ -93,6 +93,10 @@
 #define CAN_ID_DIN            0x78A
 #define CAN_ID_DOUT           0x789
 
+// CAN RX Acceptance Filter/Mask
+#define CAN_ACC_FILTER        0x780
+#define CAN_ACC_MASK          0x7F0
+
 // Timing
 #define CAN_BAUDRATE          CAN_500KBPS
 #define CAN_CLOCKRATE         MCP_8MHZ
@@ -231,7 +235,13 @@ void setup()
     DEBUG_PRINTF("Error Initializing MCP2515...\n");
     while (1);
   }
-  CAN0.setMode(MCP_NORMAL);      // Set operation mode to normal so the MCP2515 sends acks to received data.
+
+  // Set CAN RX Filter and Mask
+  CAN0.init_Filt(0,0,CAN_ACC_FILTER);
+  CAN0.init_Mask(0,0,CAN_ACC_MASK);
+
+  // Set operation mode to normal so the MCP2515 sends acks to received data.
+  CAN0.setMode(MCP_NORMAL);      
 
   
   Wire.begin();
@@ -390,7 +400,7 @@ void loop()
     // Analog Outputs
     //
     #ifdef DAC0_ADDR
-    if ((rxId & 0x3FFFFFFF) == CAN_ID_AOUT0) {
+    if (rxId  == CAN_ID_AOUT0) {
       uint16_t u_dac0 = (rxBuf[1] & 0xF) << 8 | rxBuf[0];
       DEBUG_PRINTF("AnalogOut0: 0x%03X\n", u_dac0);
       MCP0.setValue(u_dac0);
@@ -398,7 +408,7 @@ void loop()
     #endif
     
     #ifdef DAC1_ADDR
-    if ((rxId & 0x3FFFFFFF) == CAN_ID_AOUT1) {
+    if (rxId  == CAN_ID_AOUT1) {
       uint16_t u_dac1 = (rxBuf[1] & 0xF) << 8 | rxBuf[0];
       DEBUG_PRINTF("AnalogOut1: 0x%03X\n", u_dac1);
       MCP1.setValue(u_dac1);
@@ -408,7 +418,7 @@ void loop()
     //
     // Digital Outputs
     //
-    if ((rxId & 0x3FFFFFFF) == CAN_ID_DOUT) {
+    if (rxId == CAN_ID_DOUT) {
       DEBUG_PRINTF("DigitalOut: 0x%02X\n", rxBuf[0]);
       digitalWrite(PIN_D0_OUT, rxBuf[0] & 0x01);
       digitalWrite(PIN_D1_OUT, (rxBuf[0] >> 1) & 0x01);

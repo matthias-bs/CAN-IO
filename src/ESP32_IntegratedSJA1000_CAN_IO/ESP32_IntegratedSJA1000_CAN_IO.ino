@@ -90,6 +90,10 @@
 #define CAN_ID_DIN            0x78A
 #define CAN_ID_DOUT           0x789
 
+// CAN RX Acceptance Filter/Mask
+#define CAN_ACC_FILTER        0x780
+#define CAN_ACC_MASK          0x7F0
+
 // Timing
 #define CAN_BAUDRATE          500E3
 #define I2C_CLOCKRATE         3400000 // 800000 for slower devices
@@ -307,6 +311,9 @@ void setup()
       adc3.attach(PIN_ADC3_IN);
   #endif
 
+  // Set CAN RX Acceptance Filter & Mask
+  CAN.filter(CAN_ACC_FILTER, CAN_ACC_MASK);
+  
   // register the CAN receive callback
   CAN.onReceive(onReceive);
   

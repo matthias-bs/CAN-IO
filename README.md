@@ -26,3 +26,5 @@ Currently no effort is made to synchronize the various inputs and outputs -
 * CAN_ID_AOUT0/1 message reception -> start DAC for analog output 0/1, respectively
 * read analog inputs (sequentially) -> transmit CAN_ID_AIN message
 * read digital inputs -> transmit CAN_ID_DIN message
+
+Please take the conversion time (and transmission time, if applicable) of your DACs/ADCs into account.

@@ -19,3 +19,10 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 (2) ESP32 allows great flexibility of utilizing I/O pins - the numbers provided here are only for the default configuration. The actual number of I/O pins varies with different boards.
 
 (3) More DAC channels possible with MCP4725 devices with suitable I2C addresses
+
+## Timing
+Currently no effort is made to synchronize the various inputs and outputs -
+* CAN_ID_DOUT message reception -> update digital outputs
+* CAN_ID_AOUT0/1 message reception -> start DAC for analog output 0/1, respectively
+* read analog inputs (sequentially) -> transmit CAN_ID_AIN message
+* read digital inputs -> transmit CAN_ID_DIN message

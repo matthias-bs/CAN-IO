@@ -13,7 +13,7 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 | -------------------- | --- | ---------------------------- | --------------------------- | ------------- | -------------- | -------------- | --------------- |
 | [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> | 2<sup>(3)</sup> (0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
 | [ESP32_IntegratedSJA1000_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> | 2<sup>(3)</sup> (0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
-| AT90CAN128<br>(coming soon)                             | AT90CAN128 | Crumb128-CAN | 5V<sup>(1)</sup> / 5V | 4<sup>(4)</sup>| 2<sup>(3)</sup> | 8<sup>(5)</sup> | 8<sup>(5)</sup> |
+| AT90CAN128_CAN_IO<br>(coming soon)                             | AT90CAN128 | Crumb128-CAN | 5V<sup>(1)</sup> / 5V | 4<sup>(4)</sup>| 2<sup>(3)</sup> | 8<sup>(5)</sup> | 8<sup>(5)</sup> |
 
 (1) Supply voltage level and quality have direct impact on the DACs' output signals. For instance, you won't get a 5V analog output from a USB power supply (due to the typical schottky diode between VDDUSB and VDD5V). 
 

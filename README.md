@@ -9,7 +9,7 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 
 
 
-| Program              | MCU | Board                        | Development<br>Environment | Supply Voltage<br>Board/MCU | Analog Inputs | Analog Outputs | Digital Inputs | Digital Outputs |
+| Program              | MCU | Board                        | Devel.-Env. | Supply Voltage<br>Board/MCU | Analog Inputs | Analog Outputs | Digital Inputs | Digital Outputs |
 | -------------------- | --- | ---------------------------- | -------------------------- |--------------------------- | ------------- | -------------- | -------------- | --------------- |
 | [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | Arduino | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> | 2<sup>(3)</sup> (0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
 | [ESP32_IntegratedSJA1000_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | Arduino | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> | 2<sup>(3)</sup> (0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |

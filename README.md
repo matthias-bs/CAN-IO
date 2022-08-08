@@ -1,6 +1,12 @@
 # CAN-IO
 CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 
+* Control analog outputs by CAN messages
+* Control digital outputs by CAN message
+* Monitor analog inputs via CAN message
+* Monitor digital inputs via CAN message   
+
+
 > ⚠️ Check supply and I/O voltages carefully and build up your circuit accordingly!
 > 
 > :warning: Over voltage/over current protection for analog and digital inputs/outputs must be implemented as required!

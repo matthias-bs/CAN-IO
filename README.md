@@ -39,3 +39,17 @@ Currently no effort is made to synchronize the various inputs and outputs -
 * read digital inputs -> transmit CAN_ID_DIN message
 
 Please take the conversion time (and transmission time, if applicable) of your DACs/ADCs into account.
+
+## AT90CAN128 / Crumb128-CAN
+
+* Configure fuses on a fresh MCU - see [AVR Fuse Calculator](http://eleccelerator.com/fusecalc/fusecalc.php?chip=at90can128)
+    * Switch off "Divide clock by 8 internally":
+    * Switch to external clock oscillator >= 8 MHz (here: with a very conservative startup time...)
+
+    `avrdude -c <programmer> -P <port> -p at90can128 -U lfuse:w:0xFF:m`
+
+* The SW is configured for a 16 MHz crystal
+* Set J6 "USBpowered" if desired
+* Set J8 "HighSpeed CAN" if you don't have other requirements
+
+

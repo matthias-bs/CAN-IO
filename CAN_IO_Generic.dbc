@@ -33,34 +33,35 @@ NS_ :
 
 BS_:
 
-BU_:
+BU_: CAN_IO
 
-
-BO_ 1930 Digital_In: 8 Vector__XXX
- SG_ DigitalIn_7 : 7|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalIn_6 : 6|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalIn_5 : 5|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalIn_4 : 4|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalIn_3 : 3|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalIn_2 : 2|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalIn_1 : 1|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalIn_0 : 0|1@1- (1,0) [0|0] "" Vector__XXX
-
-BO_ 1929 Digital_Out: 8 Vector__XXX
- SG_ DigitalOut_1 : 1|1@1- (1,0) [0|0] "" Vector__XXX
- SG_ DigitalOut_0 : 0|1@1- (1,0) [0|0] "" Vector__XXX
-
-BO_ 1928 Analog_In: 8 Vector__XXX
- SG_ AnalogIn_3 : 48|12@1+ (0.001,0) [0|0] "V" Vector__XXX
- SG_ AnalogIn_2 : 32|12@1+ (0.001,0) [0|0] "V" Vector__XXX
- SG_ AnalogIn_1 : 16|12@1+ (0.001,0) [0|0] "V" Vector__XXX
- SG_ AnalogIn_0 : 0|12@1+ (0.001,0) [0|0] "V" Vector__XXX
-
-BO_ 1920 Analog_Out0: 8 Vector__XXX
- SG_ AnalogOut_0 : 0|12@1+ (0.001220703125,0) [0|0] "V" Vector__XXX
 
 BO_ 1921 Analog_Out1: 8 Vector__XXX
- SG_ AnalogOut_1 : 0|12@1+ (0.001220703125,0) [0|0] "V" Vector__XXX
+ SG_ Analog_Out1 : 0|12@1+ (0.001220703125,0) [0|0] "V"  CAN_IO
+
+BO_ 1930 Digital_In: 8 CAN_IO
+ SG_ Digital_In7 : 7|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Digital_In6 : 6|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Digital_In5 : 5|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Digital_In4 : 4|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Digital_In3 : 3|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Digital_In2 : 2|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Digital_In1 : 1|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Digital_In0 : 0|1@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1929 Digital_Out: 8 Vector__XXX
+ SG_ Digital_Out1 : 1|1@1- (1,0) [0|0] ""  CAN_IO
+ SG_ Digital_Out0 : 0|1@1- (1,0) [0|0] ""  CAN_IO
+
+BO_ 1928 Analog_In: 8 CAN_IO
+ SG_ Analog_In3 : 48|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ Analog_In2 : 32|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ Analog_In1 : 16|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ Analog_In0 : 0|12@1+ (0.001,0) [0|0] "V" Vector__XXX
+
+BO_ 1920 Analog_Out0: 8 Vector__XXX
+ SG_ Analog_Out0 : 0|12@1+ (0.001220703125,0) [0|0] "V"  CAN_IO
+
 
 
 BA_DEF_  "BusType" STRING ;

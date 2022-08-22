@@ -32,6 +32,13 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 
 (5) More I/O ports are available if required
 
+| Program                                           | MCU        | Board                        | CAN Controller | CAN Transceiver |
+| ------------------------------------------------- | ---------- | ---------------------------- | -------------- |-----------------|
+| [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO)  | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | external (MCP2515) | external |
+| [ESP32_IntegratedSJA1000<br>_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | internal | external | 
+| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | Adafruit Feather M4 Express CAN | internal | Adafruit Feather M4 Express CAN: on board |
+| [AT90CAN128_CAN_IO](src/AT90CAN128_CAN_IO)        | AT90CAN128 | Crumb128-CAN | internal | Crumb128-CAN: on board |
+
 ## Timing
 Currently no effort is made to synchronize the various inputs and outputs -
 * CAN_ID_DOUT message reception -> update digital outputs

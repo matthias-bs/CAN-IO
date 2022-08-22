@@ -14,7 +14,7 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 > :warning: Implement voltage dividers and filter capacitors for analog inputs as required.
 
 
-
+## Examples - Features
 | Program              | MCU | Board                        | Devel.-Env. | Supply Voltage<br>Board/MCU | Analog Inputs | Analog Outputs | Digital Inputs | Digital Outputs |
 | -------------------- | --- | ---------------------------- | -------------------------- |--------------------------- | ------------- | -------------- | -------------- | --------------- |
 | [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | Arduino | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> (0...3.3V) | 2<sup>(3)</sup> (external; 0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
@@ -32,6 +32,7 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 
 (5) More I/O ports are available if required
 
+## Examples - CAN Interfaces 
 | Program                                           | MCU        | Board                        | CAN Controller | CAN Transceiver |
 | ------------------------------------------------- | ---------- | ---------------------------- | -------------- |-----------------|
 | [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO)  | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | external (MCP2515)<sup>(1)</sup> | external<sup>(1)</sup> |
@@ -50,7 +51,7 @@ Currently no effort is made to synchronize the various inputs and outputs -
 
 Please take the conversion time (and transmission time, if applicable) of your DACs/ADCs into account.
 
-## AT90CAN128 / Crumb128-CAN
+## AT90CAN128 / Crumb128-CAN Configuration
 
 * Configure fuses on a fresh MCU - see [AVR Fuse Calculator](http://eleccelerator.com/fusecalc/fusecalc.php?chip=at90can128)
     * Switch off "Divide clock by 8 internally":

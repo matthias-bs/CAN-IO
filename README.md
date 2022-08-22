@@ -33,14 +33,16 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 (5) More I/O ports are available if required
 
 ## Examples - CAN Interfaces 
-| Program                                           | MCU        | Board                        | CAN Controller | CAN Transceiver |
-| ------------------------------------------------- | ---------- | ---------------------------- | -------------- |-----------------|
-| [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO)  | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | external (MCP2515)<sup>(1)</sup> | external<sup>(1)</sup> |
-| [ESP32_IntegratedSJA1000<br>_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | internal | external | 
-| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | [Adafruit Feather M4 CAN Express](https://www.adafruit.com/product/4759) | internal | Adafruit Feather M4 CAN Express: on board |
-| [AT90CAN128_CAN_IO](src/AT90CAN128_CAN_IO)        | AT90CAN128 | [Crumb128-CAN](https://www.chip45.com/products/crumb128-can-5.0_avr_atmega_module_board_at90can128_usb_rs232_can.php?en) | internal | Crumb128-CAN: on board |
+| Program                                           | MCU        | Board                        | CAN Controller | CAN Transceiver | CAN Bus Termination |
+| ------------------------------------------------- | ---------- | ---------------------------- | -------------- |-----------------| ------------------- |
+| [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO)  | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | external (MCP2515)<sup>(1)</sup> | external<sup>(1)</sup> | external<sup>(1)</sup><sup>(2)</sup> |
+| [ESP32_IntegratedSJA1000<br>_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | internal | external | external |
+| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | [Adafruit Feather M4 CAN Express](https://www.adafruit.com/product/4759) | internal | Adafruit Feather M4 CAN Express: on board | Adafruit Feather M4 CAN Express:<br> 120 Ohm on board;<br> trace "Trm" needs to be cut if not needed |
+| [AT90CAN128_CAN_IO](src/AT90CAN128_CAN_IO)        | AT90CAN128 | [Crumb128-CAN](https://www.chip45.com/products/crumb128-can-5.0_avr_atmega_module_board_at90can128_usb_rs232_can.php?en) | internal | Crumb128-CAN: on board | external |
 
 (1) Tested with [AZDelivery MCP2515 CAN Bus Module](https://www.az-delivery.de/en/products/mcp2515-can-bus-modul)
+
+(2) [AZDelivery MCP2515 CAN Bus Module](https://www.az-delivery.de/en/products/mcp2515-can-bus-modul): enable 120 Ohm termination with jumper J1
 
 ## Timing
 Currently no effort is made to synchronize the various inputs and outputs -

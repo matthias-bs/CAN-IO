@@ -19,7 +19,7 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 | -------------------- | --- | ---------------------------- | -------------------------- |--------------------------- | ------------- | -------------- | -------------- | --------------- |
 | [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | Arduino | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> (0...3.3V) | 2<sup>(3)</sup> (external; 0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
 | [ESP32_IntegratedSJA1000<br>_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | Arduino | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> (0...3.3V) | 2<sup>(3)</sup> (external; 0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
-| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | Adafruit Feather M4 Express CAN | Arduino | 5V<sup>(1)</sup> / 3.3V<sup>(1)</sup> | 4 (0...3.3V) | 2 (internal; 0..3.3V) /<br> 2<sup>(3)</sup> (external; 0..5V) | 6 | 2 |
+| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | [Adafruit Feather M4 CAN Express](https://www.adafruit.com/product/4759) | Arduino | 5V<sup>(1)</sup> / 3.3V<sup>(1)</sup> | 4 (0...3.3V) | 2 (internal; 0..3.3V) /<br> 2<sup>(3)</sup> (external; 0..5V) | 6 | 2 |
 | [AT90CAN128_CAN_IO](src/AT90CAN128_CAN_IO)       | AT90CAN128 | Crumb128-CAN | AVR-GCC | 5V<sup>(1)</sup> / 5V | 4<sup>(4)</sup> (0...5V) | 2<sup>(3)</sup> (external; 0...5V) | 8<sup>(5)</sup> | 8<sup>(5)</sup> |
 
 (1) Supply voltage level and quality have direct impact on the DACs' output signals. For instance, you won't get a 5V analog output from a USB power supply (due to the typical schottky diode between VDDUSB and VDD5V). 
@@ -36,7 +36,7 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 | ------------------------------------------------- | ---------- | ---------------------------- | -------------- |-----------------|
 | [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO)  | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | external (MCP2515)<sup>(1)</sup> | external<sup>(1)</sup> |
 | [ESP32_IntegratedSJA1000<br>_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | internal | external | 
-| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | Adafruit Feather M4 Express CAN | internal | Adafruit Feather M4 Express CAN: on board |
+| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | [Adafruit Feather M4 CAN Express](https://www.adafruit.com/product/4759) | internal | Adafruit Feather M4 Express CAN: on board |
 | [AT90CAN128_CAN_IO](src/AT90CAN128_CAN_IO)        | AT90CAN128 | Crumb128-CAN | internal | Crumb128-CAN: on board |
 
 (1) Tested with [AZDelivery MCP2515 CAN Bus Module](https://www.az-delivery.de/en/products/mcp2515-can-bus-modul)

@@ -19,7 +19,7 @@ CAN (Controller Area Network) Controlled Analog/Digital Input/Output Module
 | -------------------- | --- | ---------------------------- | -------------------------- |--------------------------- | ------------- | -------------- | -------------- | --------------- |
 | [ESP32_MCP2515_CAN_IO](src/ESP32_MCP2515_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | Arduino | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> | 2<sup>(3)</sup> (0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
 | [ESP32_IntegratedSJA1000<br>_CAN_IO](src/ESP32_IntegratedSJA1000_CAN_IO) | ESP32 | generic<br> (e.g. Joy-It SBC-NodeMCU-ESP32) | Arduino | 5V<sup>(1)</sup> / 3.3V | 2<sup>(2)</sup> | 2<sup>(3)</sup> (0...5V)    | 6<sup>(2)</sup> | 2<sup>(2)</sup> |
-| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | Adafruit Feather M4 Express CAN | Arduino | 5V<sup>(1)</sup> / 3.3V<sup>(1)</sup> | 4 | 2 (internal DACs: 0..3.3V)<br> 2<sup>(3)</sup> (external DACs: 0..5V) | 6 | 2 |
+| [ATSAME51_CAN_IO](src/ATSAME51_CAN_IO) | ATSAME51 | Adafruit Feather M4 Express CAN | Arduino | 5V<sup>(1)</sup> / 3.3V<sup>(1)</sup> | 4 | 2 (internal DACs: 0..3.3V) /<br> 2<sup>(3)</sup> (external DACs: 0..5V) | 6 | 2 |
 | [AT90CAN128_CAN_IO](src/AT90CAN128_CAN_IO)       | AT90CAN128 | Crumb128-CAN | AVR-GCC | 5V<sup>(1)</sup> / 5V | 4<sup>(4)</sup>| 2<sup>(3)</sup> | 8<sup>(5)</sup> | 8<sup>(5)</sup> |
 
 (1) Supply voltage level and quality have direct impact on the DACs' output signals. For instance, you won't get a 5V analog output from a USB power supply (due to the typical schottky diode between VDDUSB and VDD5V). 
